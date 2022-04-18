@@ -19,7 +19,11 @@ namespace FinalProject.ViewModels
        
         public ObservableCollection<Flight> Flights = new ObservableCollection<Flight>();
 
-        public ObservableCollection<Flight> Flights2 = new ObservableCollection<Flight>();
+        public ObservableCollection<Flight> FlightsTemp = new ObservableCollection<Flight>();
+
+        public ObservableCollection<Flight> FlightsSpi = new ObservableCollection<Flight>();
+
+        public ObservableCollection<Flight> FlightsGround = new ObservableCollection<Flight>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,6 +37,8 @@ namespace FinalProject.ViewModels
 
         public GroundCommand groundCommand = new GroundCommand();
 
+        public SpiCommand spiCommand = new SpiCommand();
+
         public string FlightName { get; set; }
         public string FlightNum { get; set; }
         public string FlightCountry { get; set; }
@@ -40,29 +46,54 @@ namespace FinalProject.ViewModels
         public string FlightLat { get; set; }
         public string FlightVel { get; set; }
         public string FlightGround { get; set; }
+        public string FlightSpi { get; set; }
 
         public FlightViewModel()
         {
             LoadFlights();
             groundCommand.OnGrounded += GroundCommand_OnGrounded;
+            spiCommand.OnSpiFlight += SpiCommand_OnSpiFlight;
+        }
+
+        private void SpiCommand_OnSpiFlight(object sender, EventArgs e)
+        {
+            FlightsTemp.Clear();
+
+            for (int i = 0; i < FlightsSpi.Count; i++)
+            {
+                if (FlightsSpi[i].SpiFlight == "True")
+                {
+                    FlightsTemp.Add(FlightsSpi[i]); // Find onGround == true and then and save the flight into Flight2 collection
+                }
+            }
+
+            Flights.Clear(); // to display spi true flights, clear existing flights
+            _allFlights.Clear();   
+            foreach (Flight FlightTemp in FlightsTemp) // from temp collection, add only onGround true flights 
+            {
+                Flights.Add(FlightTemp);
+                _allFlights.Add(FlightTemp);
+            }
         }
 
         private void GroundCommand_OnGrounded(object sender, EventArgs e)
         {
+            FlightsTemp.Clear();
 
-            for (int i = 0; i < Flights.Count; i++)
+            for (int i = 0; i < FlightsGround.Count; i++)
             {
-                if (Flights[i].OnGround == "True")
+                if (FlightsGround[i].OnGround == "True")
                 {
-                    Flights2.Add(Flights[i]); // Find onGround == true and then and save the flight into Flight2 collection
+                    FlightsTemp.Add(FlightsGround[i]); // Find onGround == true and then and save the flight into Flight2 collection
                 }
             }
 
             Flights.Clear(); // to display onground true flights, clear existing flights
-
-            foreach (Flight flight in Flights2) // from temp collection, add only onGround true flights 
+            _allFlights.Clear();
+            foreach (Flight FlightTemp in FlightsTemp) // from temp collection, add only onGround true flights 
             {
-                Flights.Add(flight);
+                Flights.Add(FlightTemp);
+                _allFlights.Add(FlightTemp);
             }
         }
 
@@ -79,6 +110,14 @@ namespace FinalProject.ViewModels
                 if (value == null)
                 {
                     FlightName = "No flight selected";
+                    FlightName = "";
+                    FlightNum = "" ;
+                    FlightCountry = "";
+                    FlightLong = "";
+                    FlightLat = "";
+                    FlightVel = "";
+                    FlightGround = "" ;
+                    FlightSpi = "";
                 }
                 else
                 {
@@ -89,6 +128,7 @@ namespace FinalProject.ViewModels
                     FlightLat = "Latitude: " + value.Latitude;
                     FlightVel = "Velocity: " + value.Velocity;
                     FlightGround = "On Ground: " + value.OnGround;
+                    FlightSpi = "SPI Flgiht: " + value.SpiFlight;
 
                 }
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightName"));
@@ -98,7 +138,7 @@ namespace FinalProject.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightLat"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightVel"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightGround"));
-
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightSpi"));
             }
         }
 
@@ -126,7 +166,7 @@ namespace FinalProject.ViewModels
             //Lower-case and trim string
             var lowerCaseFilter = Filter.ToLowerInvariant().Trim();
 
-            //Use LINQ query to get all note model names that match filter text, as a list
+            //Use LINQ query to get all flight model country that match filter text, as a list
             var result =
                 _allFlights.Where(d => d.FlightsAsString.ToLowerInvariant()
                 .Contains(lowerCaseFilter))
@@ -183,10 +223,13 @@ namespace FinalProject.ViewModels
                 //if (obj[2].ToString() == "Canada")
                 //{
                     Flight tmp = new Flight(obj[1].ToString(), obj[0].ToString(),
-                    obj[2].ToString(), obj[5].ToString(), obj[6].ToString(), obj[9].ToString(), obj[8].ToString());
+                    obj[2].ToString(), obj[5].ToString(), obj[6].ToString(), obj[9].ToString(), obj[8].ToString(), obj[15].ToString());
 
                     Flights.Add(tmp);
                     _allFlights.Add(tmp);
+
+                    FlightsSpi.Add(tmp);
+                    FlightsGround.Add(tmp);
                 //}
             }
         }

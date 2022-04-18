@@ -33,12 +33,30 @@ namespace FinalProject
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             NoteList.Visibility = Visibility.Visible;
+            display.Visibility = Visibility.Visible;
+            SearchButton.IsEnabled = false;
+            countryNameTextBlock.Visibility = Visibility.Collapsed;
         }
 
         private void FilterTextBox_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             NoteList.Visibility = Visibility.Collapsed;
+            SearchButton.IsEnabled = true;
+            display.Visibility = Visibility.Collapsed;
         }
 
+        private void GroundRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FilterTextBox.Text = "";
+            countryNameTextBlock.Visibility = Visibility.Visible;
+            SearchButton.IsEnabled = false;
+        }
+
+        private void SpiRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FilterTextBox.Text = "";
+            countryNameTextBlock.Visibility = Visibility.Visible;
+            SearchButton.IsEnabled = false;
+        }
     }
 }

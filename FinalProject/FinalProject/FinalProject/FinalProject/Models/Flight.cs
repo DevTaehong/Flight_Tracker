@@ -17,6 +17,8 @@ namespace FinalProject.Models
         public string Velocity { get; set; }
         public string OnGround { get; set; }
 
+        public string SpiFlight { get; set; }
+
         public string FlightsAsString => string.Join(",", Country);
 
         override public string ToString()
@@ -24,7 +26,7 @@ namespace FinalProject.Models
             return Name + ", " + Number + ", " + Country + ", " + Longitude + ", " + Latitude;
         }
 
-        public Flight(string name, string num, string country, string lng, string lat, string vel, string onGround)
+        public Flight(string name, string num, string country, string lng, string lat, string vel, string onGround, string spiFlight)
         {
             if(name == "")
             {
@@ -88,6 +90,14 @@ namespace FinalProject.Models
                 OnGround = onGround;
             }
 
+            if (spiFlight == "")
+            {
+                SpiFlight = "NULL";
+            }
+            else
+            {
+                SpiFlight = spiFlight;
+            }
 
         }
 

@@ -31,7 +31,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollViewer>
-        <StackPanel Margin="5" Height="auto" Width="auto" Grid.Column="1" Grid.Row="1">
+        <StackPanel x:Name="display" Margin="5" Height="auto" Width="auto" Grid.Column="1" Grid.Row="1">
             <TextBlock x:Name="FlightName" Margin="5" Height="auto" Width="auto" FontSize="20" 
                  TextAlignment="Left" TextWrapping="Wrap"
                  Text="{x:Bind cvm.FlightName, Mode=TwoWay}"/>
@@ -53,11 +53,16 @@
             <TextBlock x:Name="FlightGround" Margin="5" Height="auto" Width="auto" FontSize="20" 
                  TextAlignment="Left" TextWrapping="Wrap"
                  Text="{x:Bind cvm.FlightGround, Mode=TwoWay}"></TextBlock>
+            <TextBlock x:Name="FlightSpi" Margin="5" Height="auto" Width="auto" FontSize="20" 
+                 TextAlignment="Left" TextWrapping="Wrap"
+                 Text="{x:Bind cvm.FlightSpi, Mode=TwoWay}"></TextBlock>
         </StackPanel>
         <TextBox x:Name="FilterTextBox" ToolTipService.ToolTip="Type text here for search" 
                  Text="{x:Bind cvm.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextChanging="FilterTextBox_TextChanging"
                  PlaceholderText="Search for a country..." Margin="5,5,5,54" Grid.RowSpan="1" Grid.Row="0" Grid.Column="0" FontSize="17" />
-        <Button Click="SearchButton_Click" x:Name="SearchButton" Margin="5,66,0,0" Height="39" Width="135" VerticalAlignment="Top">Search</Button>
-        <RadioButton Command="{x:Bind cvm.groundCommand}" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top">On Ground</RadioButton>
+        <Button Click="SearchButton_Click" IsEnabled="False" x:Name="SearchButton" Margin="5,66,0,0" Height="39" Width="135" VerticalAlignment="Top">Search</Button>
+        <RadioButton Command="{x:Bind cvm.groundCommand}" Checked="GroundRadioButton_Checked" Margin="149,60,0,0" VerticalAlignment="Top">On Ground</RadioButton>
+        <RadioButton Command="{x:Bind cvm.spiCommand}" Checked="SpiRadioButton_Checked" Margin="149,86,0,682" VerticalAlignment="Stretch" Grid.RowSpan="2">SPI Flight</RadioButton>
+        <TextBlock Visibility="Collapsed" x:Name="countryNameTextBlock" Text="Enter a country" FontSize="25" Margin="261,69,19,8"/>
     </Grid>
 </Page>
