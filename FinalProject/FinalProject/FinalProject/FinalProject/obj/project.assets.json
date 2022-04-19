@@ -8266,11 +8266,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TaehongTaehong\\Desktop\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\TaehongTaehong\\Desktop\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectPath": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\TaehongTaehong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TaehongTaehong\\Desktop\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\obj\\",
+      "outputPath": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\FinalProject\\FinalProject\\FinalProject\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

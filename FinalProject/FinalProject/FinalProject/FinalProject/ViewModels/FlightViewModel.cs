@@ -53,7 +53,6 @@ namespace FinalProject.ViewModels
 
         public naCommand naCommand = new naCommand();
 
-
         public Geopoint FlightCenter { get; set; }
         public string FlightName { get; set; }
         public string FlightNum { get; set; }

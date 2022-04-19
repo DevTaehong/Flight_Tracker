@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>dd878065-7c9f-4ba0-a4ba-a592f356fda8</PackageIdentityName>
     <PackageIdentityPublisher>CN=snook</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
       <PackagePath>entrypoint\FinalProject.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TaehongTaehong\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
@@ -37,62 +37,62 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\plane.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\plane.png">
       <PackagePath>Assets\plane.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\ResizedPlane.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\ResizedPlane.scale-100.png">
       <PackagePath>Assets\ResizedPlane.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.xr.xml">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.xr.xml">
       <PackagePath>FinalProject.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Map.xbf">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Map.xbf">
       <PackagePath>Map.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\FinalProject.exe">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\FinalProject.exe">
       <PackagePath>FinalProject.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

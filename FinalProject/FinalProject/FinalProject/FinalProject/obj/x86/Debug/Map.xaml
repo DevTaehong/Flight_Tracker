@@ -1,0 +1,18 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="FinalProject.Map"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d"
+    xmlns:models="using:FinalProject.Models"
+    xmlns:viewmodels="using:FinalProject.ViewModels"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+   
+
+    <Grid>
+        <Maps:MapControl x:ConnectionId='2' x:Name="myMap" MapServiceToken="Agn0WVzQpdp__REsIWHaC4Wj5Av2FGD1clxxRvyEzkGUzXg7t1JrKJ4X-Dvd08Rc"                                    />
+    </Grid>
+</Page>
+
