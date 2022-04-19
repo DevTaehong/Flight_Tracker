@@ -28,15 +28,16 @@ namespace FinalProject.Models
 
         public Flight(string name, string num, string country, string lng, string lat, string vel, string onGround, string spiFlight)
         {
-            if(name == "")
+            if (name == "")
             {
                 Name = "NULL";
-            } else
+            }
+            else
             {
                 Name = name;
             }
 
-            if(num == "")
+            if (num == "")
             {
                 Number = "NULL";
             }
@@ -45,7 +46,7 @@ namespace FinalProject.Models
                 Number = num;
             }
 
-            if(country == "")
+            if (country == "")
             {
                 Country = "NULL";
             }
@@ -54,7 +55,7 @@ namespace FinalProject.Models
                 Country = country;
             }
 
-            if(lng == "")
+            if (lng == "")
             {
                 Longitude = "NULL";
             }
@@ -63,7 +64,7 @@ namespace FinalProject.Models
                 Longitude = lng;
             }
 
-            if(lat == "")
+            if (lat == "")
             {
                 Latitude = "NULL";
             }
@@ -72,7 +73,7 @@ namespace FinalProject.Models
                 Latitude = lat;
             }
 
-            if(vel == "")
+            if (vel == "")
             {
                 Velocity = "NULL";
             }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FinalProject.Commands;
+using FinalProject.Models;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -7,29 +10,38 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using FinalProject.Commands;
-using FinalProject.Models;
-using Newtonsoft.Json.Linq;
+using System.Windows.Input;
+using Windows.ApplicationModel.Core;
+using Windows.Devices.Geolocation;
+using Windows.UI;
+using Windows.UI.Core;
+using Windows.UI.ViewManagement;
+using Windows.UI.WindowManagement;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Hosting;
 
 namespace FinalProject.ViewModels
 {
     public class FlightViewModel : INotifyPropertyChanged
     {
-       
-        public ObservableCollection<Flight> Flights = new ObservableCollection<Flight>();
 
+        public ObservableCollection<Flight> Flights = new ObservableCollection<Flight>();
+        
         public ObservableCollection<Flight> FlightsTemp = new ObservableCollection<Flight>();
 
         public ObservableCollection<Flight> FlightsSpi = new ObservableCollection<Flight>();
 
         public ObservableCollection<Flight> FlightsGround = new ObservableCollection<Flight>();
 
+        public ObservableCollection<Flight> FlightsNa = new ObservableCollection<Flight>();
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private Flight _selectedFlight;
 
         private string _filter;
+        private Geopoint snPoint;
 
         static HttpClient client = new HttpClient();
 
@@ -39,6 +51,10 @@ namespace FinalProject.ViewModels
 
         public SpiCommand spiCommand = new SpiCommand();
 
+        public naCommand naCommand = new naCommand();
+
+
+        public Geopoint FlightCenter { get; set; }
         public string FlightName { get; set; }
         public string FlightNum { get; set; }
         public string FlightCountry { get; set; }
@@ -47,12 +63,26 @@ namespace FinalProject.ViewModels
         public string FlightVel { get; set; }
         public string FlightGround { get; set; }
         public string FlightSpi { get; set; }
-
+       
+       
         public FlightViewModel()
         {
             LoadFlights();
             groundCommand.OnGrounded += GroundCommand_OnGrounded;
             spiCommand.OnSpiFlight += SpiCommand_OnSpiFlight;
+            naCommand.OnNaFlight += NaCommand_OnNaFlight;
+        }
+
+        private void NaCommand_OnNaFlight(object sender, EventArgs e)
+        {
+            Flights.Clear(); // clear existing flights data
+            _allFlights.Clear();
+
+            foreach (var flight in FlightsNa)
+            {
+                Flights.Add(flight); // readd flights data from the API
+                _allFlights.Add(flight);
+            }
         }
 
         private void SpiCommand_OnSpiFlight(object sender, EventArgs e)
@@ -63,13 +93,13 @@ namespace FinalProject.ViewModels
             {
                 if (FlightsSpi[i].SpiFlight == "True")
                 {
-                    FlightsTemp.Add(FlightsSpi[i]); // Find onGround == true and then and save the flight into Flight2 collection
+                    FlightsTemp.Add(FlightsSpi[i]); // Find SPI flight == true and then and save the flight into Flight2 collection
                 }
             }
 
             Flights.Clear(); // to display spi true flights, clear existing flights
-            _allFlights.Clear();   
-            foreach (Flight FlightTemp in FlightsTemp) // from temp collection, add only onGround true flights 
+            _allFlights.Clear();
+            foreach (Flight FlightTemp in FlightsTemp) // from temp collection, add only SPI flights true flights 
             {
                 Flights.Add(FlightTemp);
                 _allFlights.Add(FlightTemp);
@@ -96,6 +126,56 @@ namespace FinalProject.ViewModels
                 _allFlights.Add(FlightTemp);
             }
         }
+        public ICommand ViewOnMapCommand
+        {
+            get
+            {
+                return new ViewOnMapCommand(viewOnMapCommand);
+            }
+        }
+
+        // Track open app windows in a Dictionary.
+        public static Dictionary<UIContext, AppWindow> AppWindows { get; set; }
+            = new Dictionary<UIContext, AppWindow>();
+
+        private async void viewOnMapCommand()
+        {
+            Map map = new Map(); 
+            map.cvm = this;
+            map.cvm.SelectedFlight = SelectedFlight;
+            //map.Add
+            // Create a new window.
+            AppWindow appWindow = await AppWindow.TryCreateAsync();
+
+            // Create a Frame and navigate to the Page you want to show in the new window.
+            Frame appWindowContentFrame = new Frame();
+            appWindowContentFrame.Navigate(typeof(Map), SelectedFlight);
+
+
+            // Attach the XAML content to the window.
+            ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowContentFrame);
+
+            // Add the new page to the Dictionary using the UIContext as the Key.
+            AppWindows.Add(appWindowContentFrame.UIContext, appWindow);
+            appWindow.Title = "Flight: " +  SelectedFlight.Name;
+
+            // When the window is closed, be sure to release
+            // XAML resources and the reference to the window.
+            appWindow.Closed += delegate
+            {
+                MainPage.AppWindows.Remove(appWindowContentFrame.UIContext);
+                appWindowContentFrame.Content = null;
+                appWindow = null;
+            };
+
+            // Show the window.
+            await appWindow.TryShowAsync();
+
+           
+
+
+        }
+
 
 
         public Flight SelectedFlight
@@ -111,16 +191,20 @@ namespace FinalProject.ViewModels
                 {
                     FlightName = "No flight selected";
                     FlightName = "";
-                    FlightNum = "" ;
+                    FlightNum = "";
                     FlightCountry = "";
                     FlightLong = "";
                     FlightLat = "";
                     FlightVel = "";
-                    FlightGround = "" ;
+                    FlightGround = "";
                     FlightSpi = "";
                 }
                 else
                 {
+                    BasicGeoposition snPosition = new BasicGeoposition { Latitude = Convert.ToDouble(SelectedFlight.Latitude), Longitude = Convert.ToDouble(SelectedFlight.Longitude) };
+                    Geopoint snPoint = new Geopoint(snPosition);
+
+                    FlightCenter = snPoint;
                     FlightName = "Name: " + value.Name;
                     FlightNum = "Number: " + value.Number;
                     FlightCountry = "Country: " + value.Country;
@@ -139,8 +223,27 @@ namespace FinalProject.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightVel"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightGround"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightSpi"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlightCenter"));
             }
         }
+        public Geopoint Center
+        {
+            get
+            {
+                return snPoint;
+
+            }
+            set
+            {
+                snPoint = value;
+                if (value == snPoint) { return; }
+ 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Center"));
+               
+            }
+        }
+
+
 
         public string Filter
         {
@@ -220,17 +323,16 @@ namespace FinalProject.ViewModels
             var test = json.GetValue("states");
             foreach (var obj in test)
             {
-                //if (obj[2].ToString() == "Canada")
-                //{
-                    Flight tmp = new Flight(obj[1].ToString(), obj[0].ToString(),
-                    obj[2].ToString(), obj[5].ToString(), obj[6].ToString(), obj[9].ToString(), obj[8].ToString(), obj[15].ToString());
+                
+                Flight tmp = new Flight(obj[1].ToString(), obj[0].ToString(),
+                obj[2].ToString(), obj[5].ToString(), obj[6].ToString(), obj[9].ToString(), obj[8].ToString(), obj[15].ToString());
 
-                    Flights.Add(tmp);
-                    _allFlights.Add(tmp);
+                Flights.Add(tmp);
+                _allFlights.Add(tmp);
 
-                    FlightsSpi.Add(tmp);
-                    FlightsGround.Add(tmp);
-                //}
+                FlightsSpi.Add(tmp);
+                FlightsGround.Add(tmp);
+                FlightsNa.Add(tmp);
             }
         }
     }

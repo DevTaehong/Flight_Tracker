@@ -1,5 +1,7 @@
 WinMetadata\Windows.winmd
 Assets\LockScreenLogo.scale-200.png
+Assets\plane.png
+Assets\ResizedPlane.scale-100.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
@@ -9,4 +11,5 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 FinalProject.xr.xml
 MainPage.xbf
+Map.xbf
 Properties\Default.rd.xml

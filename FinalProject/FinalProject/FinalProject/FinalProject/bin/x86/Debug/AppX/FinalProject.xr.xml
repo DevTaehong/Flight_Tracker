@@ -6,9 +6,28 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="TopAppBar" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="SecondaryCommands" />
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="CommandParameter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
+      <RootMethod Name="GetToolTip" />
+      <RootMethod Name="SetToolTip" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
@@ -43,10 +62,6 @@
       <RootProperty Name="FontSize" />
       <RootEvent Name="TextChanging" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
-      <RootMethod Name="GetToolTip" />
-      <RootMethod Name="SetToolTip" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Margin" />
@@ -61,6 +76,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootEvent Name="Checked" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -73,10 +90,6 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="TextWrapping" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="UpdateSourceTrigger" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Visibility" />
       <RootProperty Name="ItemsSource" />
@@ -87,5 +100,10 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="FinalProject.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="MapServiceToken" />
+      <RootProperty Name="Center" />
+    </RootType>
+    <RootType FullName="FinalProject.Map" />
   </Roots.RootTypes>
 </Roots>

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.WindowManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,14 +24,15 @@ namespace FinalProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        
         public ViewModels.FlightViewModel cvm { get; set; }
+        // Track open app windows in a Dictionary.
+        public static Dictionary<UIContext, AppWindow> AppWindows { get; set; }
+            = new Dictionary<UIContext, AppWindow>();
         public MainPage()
         {
             this.InitializeComponent();
             cvm = new ViewModels.FlightViewModel();
         }
-
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             NoteList.Visibility = Visibility.Visible;
@@ -53,6 +56,13 @@ namespace FinalProject
         }
 
         private void SpiRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FilterTextBox.Text = "";
+            countryNameTextBlock.Visibility = Visibility.Visible;
+            SearchButton.IsEnabled = false;
+        }
+
+        private void NaRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             FilterTextBox.Text = "";
             countryNameTextBlock.Visibility = Visibility.Visible;

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>dd878065-7c9f-4ba0-a4ba-a592f356fda8</PackageIdentityName>
     <PackageIdentityPublisher>CN=snook</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>CCB1EDBF911CFA5FE911D4CDF01265A5BEEB5F28B3890228A9613FD977B19B5A</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>EA79115B5A14995EE32D83C95BAA243DFA724AB15890EBA76400E9575441E864</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>dd878065-7c9f-4ba0-a4ba-a592f356fda8_1.0.0.0_x86__3qfvpjyzvx2w6</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>dd878065-7c9f-4ba0-a4ba-a592f356fda8_3qfvpjyzvx2w6!App</RegisteredUserModeAppID>
     <RegisteredPackageID>dd878065-7c9f-4ba0-a4ba-a592f356fda8</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-18T00:59:31.705</Modified>
+      <Modified>2022-04-19T00:29:18.807</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
       <PackagePath>entrypoint\FinalProject.exe</PackagePath>
-      <Modified>2022-04-18T00:59:31.189</Modified>
+      <Modified>2022-04-19T00:29:18.301</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TaehongTaehong\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -50,67 +50,80 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T09:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-04-15T23:30:02.000</Modified>
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\plane.png">
+      <PackagePath>Assets\plane.png</PackagePath>
+      <Modified>2022-04-18T23:54:02.081</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\ResizedPlane.scale-100.png">
+      <PackagePath>Assets\ResizedPlane.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-18T23:54:02.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.069</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.105</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.116</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.128</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.140</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.151</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T23:29:58.000</Modified>
+      <Modified>2022-04-18T23:54:02.163</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.xr.xml">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2022-04-18T23:54:04.468</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\FinalProject.xr.xml">
       <PackagePath>FinalProject.xr.xml</PackagePath>
-      <Modified>2022-04-18T00:59:31.112</Modified>
+      <Modified>2022-04-19T00:25:05.313</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-18T00:59:31.116</Modified>
+      <Modified>2022-04-19T00:29:18.206</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-18T00:59:31.116</Modified>
+      <Modified>2022-04-19T00:29:18.206</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Map.xbf">
+      <PackagePath>Map.xbf</PackagePath>
+      <Modified>2022-04-19T00:29:18.206</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T07:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-18T00:18:39.226</Modified>
+      <Modified>2022-04-18T23:59:38.025</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TaehongTaehong\source\repos\CSharp-Group-Project\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\FinalProject.exe">
+    <AppxPackagedFile Include="C:\Users\TaehongTaehong\Desktop\FinalProject\FinalProject\FinalProject\FinalProject\bin\x86\Debug\Core\FinalProject.exe">
       <PackagePath>FinalProject.exe</PackagePath>
-      <Modified>2022-04-18T00:59:31.702</Modified>
+      <Modified>2022-04-19T00:29:18.804</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
