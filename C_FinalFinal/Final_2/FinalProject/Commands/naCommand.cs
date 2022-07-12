@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace FinalProject.Commands
+namespace FlightTracker.Commands
 {
     public class naCommand : ICommand
     {

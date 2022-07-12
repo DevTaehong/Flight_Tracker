@@ -35,7 +35,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Title:" Margin="0,0,0,15" FontSize="32"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="title"  FontSize="32"
+                <TextBlock x:ConnectionId='2' Grid.Row="0" Grid.Column="1" x:Name="title"  FontSize="32"
                        TextWrapping="Wrap" Text="Flight Tracker" Margin="0,0,0,15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBlock.RenderTransform>
                         <CompositeTransform Rotation="0.377"/>
@@ -43,20 +43,20 @@
                 </TextBlock>
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="API:" Margin="0,0,0,15" FontSize="32"/>
-                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="API"  FontSize="32"
+                <TextBlock x:ConnectionId='3' Grid.Row="1" Grid.Column="1" x:Name="API"  FontSize="32"
                        TextWrapping="Wrap" Text="https://opensky-network.org/api" Margin="0,0,0,15"/>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Version" Margin="0,0,0,15" FontSize="32"/>
-                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Version"  FontSize="32"
+                <TextBlock x:ConnectionId='4' Grid.Row="2" Grid.Column="1" x:Name="Version"  FontSize="32"
                        TextWrapping="Wrap" Text="1.0" Margin="0,0,0,15"/>
 
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="Team Members:" Margin="0,0,0,15" FontSize="32"/>
-                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Createdby"  FontSize="32"
+                <TextBlock x:ConnectionId='5' Grid.Row="3" Grid.Column="1" x:Name="Createdby"  FontSize="32"
                        TextWrapping="Wrap" Text="Josh Gauthier, Nathan Snook, Olamiposi Korede,Taehong Min
                  " Margin="0,0,0,15"/>
 
                 <TextBlock Grid.Row="4" Grid.Column="0" Text="Description" Margin="0,0,0,15" FontSize="32"/>
-                <TextBlock Grid.Row="4" Grid.Column="1" x:Name="Description"  FontSize="32"
+                <TextBlock x:ConnectionId='6' Grid.Row="4" Grid.Column="1" x:Name="Description"  FontSize="32"
                        TextWrapping="Wrap" Text="A flight tracker that allows you to search flight data and view flight locations on  a map" Margin="0,0,0,15"/>
             </Grid>
 
@@ -64,3 +64,4 @@
         </StackPanel>
     </ScrollViewer>
 </Page>
+

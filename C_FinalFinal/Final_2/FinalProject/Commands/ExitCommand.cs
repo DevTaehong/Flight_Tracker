@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-namespace FinalProject.Commands
+namespace FlightTracker.Commands
 {
     public class ExitCommand : ICommand
     {

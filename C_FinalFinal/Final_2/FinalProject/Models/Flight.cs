@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Models
+namespace FlightTracker.Models
 {
     public class Flight
     {

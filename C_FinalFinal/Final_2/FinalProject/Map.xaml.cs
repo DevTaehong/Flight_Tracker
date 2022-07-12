@@ -1,4 +1,4 @@
-﻿using FinalProject.Models;
+﻿using FlightTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,12 +17,12 @@ using Windows.Devices.Geolocation;
 using Windows.UI.Xaml.Controls.Maps;
 using System.Threading.Tasks;
 using Windows.UI.WindowManagement;
-using FinalProject.ViewModels;
+using FlightTracker.ViewModels;
 using Windows.Storage.Streams;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace FinalProject
+namespace FlightTracker
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

@@ -7,7 +7,7 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 
 
-namespace FinalProject.Commands
+namespace FlightTracker.Commands
 {
     public class AboutCommand : ICommand
     {

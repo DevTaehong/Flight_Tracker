@@ -1,12 +1,12 @@
 ﻿<Page
-    x:Class="FinalProject.MainPage"
+    x:Class="FlightTracker.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FinalProject"
+    xmlns:local="using:FlightTracker"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="using:FinalProject.Models"
-    xmlns:viewmodels="using:FinalProject.ViewModels"
+    xmlns:models="using:FlightTracker.Models"
+    xmlns:viewmodels="using:FlightTracker.ViewModels"
     
     mc:Ignorable="d"
     

@@ -65,7 +65,7 @@
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="Rotation" />
     </RootType>
-    <RootType FullName="FinalProject.AboutPage" />
+    <RootType FullName="FlightTracker.AboutPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="PrimaryCommands" />
@@ -118,11 +118,11 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="FinalProject.MainPage" />
+    <RootType FullName="FlightTracker.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
       <RootProperty Name="MapServiceToken" />
       <RootProperty Name="Center" />
     </RootType>
-    <RootType FullName="FinalProject.Map" />
+    <RootType FullName="FlightTracker.Map" />
   </Roots.RootTypes>
 </Roots>

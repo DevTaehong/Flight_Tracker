@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FinalProject.csproj": {}
+    "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FlightTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FinalProject.csproj": {
+    "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FlightTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FlightTracker.csproj",
         "projectName": "FinalProject",
-        "projectPath": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FinalProject.csproj",
+        "projectPath": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\FlightTracker.csproj",
         "packagesPath": "C:\\Users\\TaehongTaehong\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\TaehongTaehong\\source\\repos\\CSharp-Group-Project\\C_FinalFinal\\Final_2\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,5 +1,5 @@
-﻿using FinalProject.Commands;
-using FinalProject.Models;
+﻿using FlightTracker.Commands;
+using FlightTracker.Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
 
-namespace FinalProject.ViewModels
+namespace FlightTracker.ViewModels
 {
     public class FlightViewModel : INotifyPropertyChanged
     {
@@ -303,6 +303,7 @@ namespace FinalProject.ViewModels
 
             string id_url = "https://opensky-network.org/api/states/all";
 
+          
             WebRequest requst = WebRequest.Create(id_url);
             requst.Method = "GET";
 
