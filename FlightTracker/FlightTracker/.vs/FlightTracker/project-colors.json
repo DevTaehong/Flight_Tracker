@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7e82cfac-4fa2-43b0-a243-5c2dc1c497ff": {
+      "ProjectGuid": "7e82cfac-4fa2-43b0-a243-5c2dc1c497ff",
+      "DisplayName": "FlightTracker",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
